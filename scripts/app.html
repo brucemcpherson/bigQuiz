@@ -1,0 +1,132 @@
+<header class="mui-appbar mui--z1">
+  <div class="mui-container">
+    <table width="100%">
+      <tr class="mui--appbar-height">
+        <td class="mui--text-title">
+          <h2>Big Quiz</h2></td>
+        <td>
+          <aside>questions derived from Jeopardy <a href="https://www.reddit.com/r/datasets/comments/1uyd0t/200000_jeopardy_questions_in_a_json_file">list</a>
+          </aside>
+          <td>
+            <td align="right" id="welcome">
+
+            </td>
+            <td align="right">
+              <img id="playerphoto" class="picture-frame">
+            </td>
+      </tr>
+    </table>
+  </div>
+</header>
+
+<div id="content-wrapper" class="mui-container">
+  <div class="mui--appbar-height"></div>
+  <div class="mui-container" id="control">
+
+    <table class="mui-table">
+      <tr>
+        <td><label for="categories">Categories</label></td>
+        <td>
+          <div id="selectspinner">
+            <svg class="spinner" width="33px" height="33px" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+              <circle class="path" fill="none" stroke-width="4" stroke-linecap="round" cx="17" cy="17" r="15"></circle>
+            </svg>
+          </div>
+          <div id="selectselect" class="mui--hide"><select id="categories" class="mui-select"></select></div>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="numquestions">Number of multiple choice answers</label></td>
+        <td><input type="number" name="numquestions" id="numquestions" min="2" max="6" value="4" class="mui-textfield--float-label"></td>
+
+      </tr>
+      <tr>
+        <td><button class="mui-btn mui-btn--primary" id="go" disabled>Start questions</button>
+        <button class="mui-btn mui-btn mui-btn--accent" id="goviz" disabled>Show my results</button></td>
+        <td>
+          <div id="startspinner" class="mui--hide">
+            <svg class="spinner" width="33px" height="33px" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+              <circle class="path" fill="none" stroke-width="4" stroke-linecap="round" cx="17" cy="17" r="15"></circle>
+            </svg>
+          </div>
+        </td>
+      </tr>
+      <tr>
+     
+      </tr>
+    </table>
+  </div>
+
+  <div class="mui-container">
+    <div id="message" class="message"></div>
+  </div>
+
+
+  <div id="render" class="mui-container mui--hide">
+
+    <div id="report"></div>
+    <div>
+      <table class="buttons" style="display:inline;">
+        <tr>
+
+          <td>
+    
+             <div class="mui--text-center">
+             <div class="mui--text-caption">
+               Game
+              </div>
+             <div id="gamearc">
+            </div>
+           </div>
+           
+         </td> 
+          <td>
+    
+             <div class="mui--text-center">
+             <div class="mui--text-caption">
+               Category
+              </div>
+             <div id="categoryarc">
+            </div>
+           </div>
+           
+         </td>      
+ 
+         <td>
+    
+             <div class="mui--text-center">
+             <div class="mui--text-caption">
+               Points for answering
+              </div>
+             <div id="valuearc">
+            </div>
+           </div>
+           
+         </td>
+         
+
+
+        </tr>
+      </table>
+
+      <table class="buttons mui--pull-right" style="display:inline;">
+        <tr>
+          <td><button id="next" class="mui-btn mui-btn--primary buttons">Next question</button></td>
+          <td><button id="pause" class="mui-btn mui-btn--accent buttons">Pause</button></td>
+          <td><button id="resume" class="mui-btn mui-btn--accent buttons mui--hide">Resume</button></td>
+          <td><button id="reset" class="mui-btn mui-btn--accent buttons">Back</button></td>
+        </tr>
+      </table>
+    </div>
+
+  </div>
+  <div id="viz" class="mui-container mui--hide">
+  <div id="vizible"></div>
+   <button id="resetviz" class="mui-btn mui-btn--accent buttons mui--hide">Back</button>
+  </div>
+</div>
+<footer>
+
+  <div class="mui-container mui--hide" id="message"></div>
+
+</footer>
