@@ -9,13 +9,14 @@ var Server = (function (ns) {
   /**
   * given a category get a selection of random questions
   * @param {string} category the category
-  * @param {number} numberOfQuestions how many questions
+  * @param {number} numberOfQuestions how many questions to use for answer multiple choice
+  * @param {number} [chunkSize=1] the number of question chunks
   * @param {[object]} questions
   */
-  ns.getQuestions = function (category , numberOfQuestions) {
+  ns.getQuestions = function (category , numberOfQuestions,chunkSize) {
     return Execution.run (
       'getQuestions',
-      [category,numberOfQuestions],
+      [category,numberOfQuestions,chunkSize || 1],
       false
     ).response.result;
   };
