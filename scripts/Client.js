@@ -5,6 +5,12 @@
 */
 var Client = (function (ns) {
   
+  /**
+   * asks the server to update the score
+   * after a question has been dealt with
+   * @param {object} gameData the score data to update
+   * @return {Promise} for completin
+   */
   ns.updateScore = function (gameData) {
      
     var ag = App.globals;
@@ -21,6 +27,11 @@ var Client = (function (ns) {
     
   };
   
+   /**
+   * asks the server to get all the game data 
+   * this is used for reports
+   * @return {Promise} for completin
+   */
   ns.getAllGameData = function () {
     var ag=App.globals;
     App.clearMessage();
@@ -32,7 +43,11 @@ var Client = (function (ns) {
 
   };
  
-  
+  /**
+   * asks the server to register a user to the game
+   * after a question has been dealt with
+   * @return {Promise} for completin
+   */
   ns.register = function () {
 
     var ag = App.globals;
@@ -55,6 +70,12 @@ var Client = (function (ns) {
     return ag.promises.register;
   };
 
+  /**
+   * asks the server to register that a new category is being played
+   * after a question has been dealt with
+   * @param {object} gameData the gamedata
+   * @return {Promise} for completin
+   */
   ns.registerCategory = function (gameData) {
 
     var ag = App.globals;
@@ -100,20 +121,18 @@ var Client = (function (ns) {
         ag.source.data =  q.shift();
         
         // get some more to replenish for next time
-        ns.getData();
+        if(q.length < ag.questions.chunkRefresh) {
+          ns.getData();
+        }
         resolve (ag.source.data);
       }
       
       else {
-
         // there's not any, so need to get some now
         ns.getData().then ( 
           function (result) {
-            var q = ag.source.q[result.picked.category];
+            var q = ag.source.q[result.category];
             ag.source.data = q.shift();            
-      
-            // get some more to replenish
-            ns.getData();
             resolve (ag.source.data);
           },
           function (err) {
@@ -131,10 +150,13 @@ var Client = (function (ns) {
     var ag = App.globals;
 
     return new Promise ( function (resolve, reject) {
-      Provoke.run ('Server','getQuestions',ag.questions.category,ag.questions.numQuestions).then (
-        function (result) {
-          ag.source.q[result.picked.category] = ag.source.q[result.picked.category] || [];
-          ag.source.q[result.picked.category].push (result);
+      Provoke.run ('Server','getQuestions',ag.questions.category,ag.questions.numQuestions,ag.questions.chunkSize).then (
+        function (result) { 
+          // this is a queue of questions by category .. getting a bunch at once saves on fetches and there will usually be qs available locally
+          ag.source.q[result.category] = ag.source.q[result.category] || [];
+          Array.prototype.push.apply(ag.source.q[result.category], result.questions);
+          console.log('refreshing ' + result.category + ' queue size is ' + ag.source.q[result.category].length);
+          
           resolve(result);
         },
         function (err) {
