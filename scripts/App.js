@@ -20,10 +20,12 @@ var App = (function (ns) {
     questions: {
       maxCategories: 150,
       numQuestions: 4,
-      category: "ARTISTS",
+      category: "HAIL TO THE CHIEF",
       asking: false,
       score: 0,
-      defaultValue:1000
+      defaultValue:1000,
+      chunkSize:8,
+      chunkRefresh:3
     },
     player: {
       data: null,
