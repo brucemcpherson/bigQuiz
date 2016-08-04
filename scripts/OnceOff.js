@@ -33,11 +33,16 @@ function onceOff () {
       data:{
         uid:"bruce"
       },
-      clientSecret:'aKxxxxxxxxxxxxxx0h',
+      clientSecret:'aK....0h',
       root:'https://bigquiz.firebaseio.com/',
       service:'firebase'
   });
     
 
+}
+
+function kill (){
+
+  cGoa.GoaApp.invalidate(PropertiesService.getScriptProperties(), Demo.PACKAGE_RUN.name);
 }
         
