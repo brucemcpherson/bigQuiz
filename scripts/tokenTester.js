@@ -10,9 +10,18 @@ function tokenTester() {
 
   
   var goa = cGoa.make(Demo.PACKAGE_PLAY.name,Demo.PACKAGE_PLAY.props);
-  //Logger.log(goa.getPackage());
+  Logger.log(goa.getPackage());
   Logger.log(goa.hasToken());
 
 
+  
+}
+
+function trackingTester () {
+
+  var info = Tracking.init()
+  .register("bigquiz");
+  Logger.log(info);
+  
   
 }
