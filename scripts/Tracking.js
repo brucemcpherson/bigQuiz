@@ -30,13 +30,20 @@ var Tracking = (function (ns) {
    */
   ns.init = function () {
     
-    // make a goa and get a firebase handle
+
+    
+    // use GOA to make token
     var goa =  cGoa.make (Demo.PACKAGE_PLAY.name,Demo.PACKAGE_PLAY.props);
+    ns.handle = new cFireBase
+    .FireBase()
+    .setAuthData (goa);
     
-    // use this handle for everything
-    ns.handle = new cFireBase.FireBase().setAuthData (goa);
-    
-    return ns;
+    //OR.. use local version of JWT
+    //ns.handle = new cFireBase
+    //.FireBase()
+    //.generateJWT('https://bigquiz.firebaseio.com/',{uid:"bruce"},'aK.....h0h');
+
+     return ns;
   };  
 
   /**
