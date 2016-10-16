@@ -1,5 +1,5 @@
 # Google Apps Script Project: bigQuiz
-This repo (bigQuiz) was automatically updated on 04 August 2016 11:51:32 BST by GasGit
+This repo (bigQuiz) was automatically updated on 16 October 2016 15:29:22 BST by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project bigQuiz
@@ -26,14 +26,14 @@ tokenTester| server_js
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
 cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|58|no|[here](libraries/cUseful "library source")
-cFireBase| cFireBase|MBz9GwQn5jZOg-riXY3pBTCz3TLx7pV4j|8|no|[here](libraries/cFireBase "library source")
+cFireBase| cFireBase|MBz9GwQn5jZOg-riXY3pBTCz3TLx7pV4j|unknown|no|[here](libraries/cFireBase "library source")
 cHouse| cHouse|Mg4EKQGaCokmcM_E6oxStNKi_d-phDA33|4|no|[here](libraries/cHouse "library source")
 cGoa| cGoa|MZx5DzNPsYjVyZaR67xXJQai_d-phDA33|22|no|[here](libraries/cGoa "library source")
 ### All dependencies and sub dependencies
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
 cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|58|no|[here](libraries/cUseful "library source")
-cFireBase| cFireBase|MBz9GwQn5jZOg-riXY3pBTCz3TLx7pV4j|8|no|[here](libraries/cFireBase "library source")
+cFireBase| cFireBase|MBz9GwQn5jZOg-riXY3pBTCz3TLx7pV4j|unknown|no|[here](libraries/cFireBase "library source")
 cHouse| cHouse|Mg4EKQGaCokmcM_E6oxStNKi_d-phDA33|4|no|[here](libraries/cHouse "library source")
 cGoa| cGoa|MZx5DzNPsYjVyZaR67xXJQai_d-phDA33|22|no|[here](libraries/cGoa "library source")
 ### Enabled Google Services
