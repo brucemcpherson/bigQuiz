@@ -1,5 +1,5 @@
 # Google Apps Script Project: bigQuiz
-This repo (bigQuiz) was automatically updated on 16 October 2016 15:29:22 BST by GasGit
+This repo (bigQuiz) was automatically updated on 31 October 2018 11:42:20 GMT by GasGit
 
 For more information see the [desktop liberation site](http://ramblings.mcpher.com/Home/excelquirks/drivesdk/gettinggithubready "desktop liberation") or [contact me on G+](https://plus.google.com/+BruceMcpherson "Bruce McPherson - GDE")
 ## Details for Apps Script project bigQuiz
@@ -22,23 +22,26 @@ app| html
 Execution| server_js
 Server| server_js
 tokenTester| server_js
+appsscript| json
 ### Directly referenced libraries
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|58|no|[here](libraries/cUseful "library source")
-cFireBase| cFireBase|MBz9GwQn5jZOg-riXY3pBTCz3TLx7pV4j|unknown|no|[here](libraries/cFireBase "library source")
-cHouse| cHouse|Mg4EKQGaCokmcM_E6oxStNKi_d-phDA33|4|no|[here](libraries/cHouse "library source")
-cGoa| cGoa|MZx5DzNPsYjVyZaR67xXJQai_d-phDA33|22|no|[here](libraries/cGoa "library source")
+cUseful| cUseful|1EbLSESpiGkI3PYmJqWh3-rmLkYKAtCNPi1L2YCtMgo2Ut8xMThfJ41Ex|58|no|[here](libraries/cUseful "library source")
+cHouse| cHouse|1bV0DJyUfBQuP5w_L8Hqsj78zPpN3hJA-h3T6LEz8_a4sgW_b1jahkv3A|4|no|[here](libraries/cHouse "library source")
+cGoa| cGoa|1v_l4xN3ICa0lAW315NQEzAHPSoNiFdWHsMEwj2qA5t9cgZ5VWci2Qxv2|22|no|[here](libraries/cGoa "library source")
+cFireBase| cFireBase|18qhPwatsNUfbJTHBQ1bmsZBKjQsPxj_hMC59zowprZCSFT1z0IrLcMu1|8|no|[here](libraries/cFireBase "library source")
 ### All dependencies and sub dependencies
 *library*|*identifier*|*key*|*version*|*dev mode*|*source*|
 --- | --- | --- | --- | --- | --- 
-cUseful| cUseful|Mcbr-v4SsYKJP7JMohttAZyz3TLx7pV4j|58|no|[here](libraries/cUseful "library source")
-cFireBase| cFireBase|MBz9GwQn5jZOg-riXY3pBTCz3TLx7pV4j|unknown|no|[here](libraries/cFireBase "library source")
-cHouse| cHouse|Mg4EKQGaCokmcM_E6oxStNKi_d-phDA33|4|no|[here](libraries/cHouse "library source")
-cGoa| cGoa|MZx5DzNPsYjVyZaR67xXJQai_d-phDA33|22|no|[here](libraries/cGoa "library source")
+cUseful| cUseful|1EbLSESpiGkI3PYmJqWh3-rmLkYKAtCNPi1L2YCtMgo2Ut8xMThfJ41Ex|58|no|[here](libraries/cUseful "library source")
+cHouse| cHouse|1bV0DJyUfBQuP5w_L8Hqsj78zPpN3hJA-h3T6LEz8_a4sgW_b1jahkv3A|4|no|[here](libraries/cHouse "library source")
+cGoa| cGoa|1v_l4xN3ICa0lAW315NQEzAHPSoNiFdWHsMEwj2qA5t9cgZ5VWci2Qxv2|22|no|[here](libraries/cGoa "library source")
+cFireBase| cFireBase|18qhPwatsNUfbJTHBQ1bmsZBKjQsPxj_hMC59zowprZCSFT1z0IrLcMu1|8|no|[here](libraries/cFireBase "library source")
 ### Enabled Google Services
 *library*|*identifier*|*version*
 --- | --- | --- 
 BigQuery| BigQuery|v2
-###Need more detail ?
+### Scopes required
+no scopes discovered
+### Need more detail ?
 You can see [full project info as json here](info.json)
